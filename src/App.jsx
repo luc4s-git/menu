@@ -1,4 +1,10 @@
+import Title from './components/Title';
+
 const App = () => {
-  return <h2>Menu Starter</h2>;
+  return (
+    <main className="menu">
+      <Title>our menu</Title>
+    </main>
+  );
 };
 export default App;
