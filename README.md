@@ -4,11 +4,11 @@
 
 ## Steps
 
-#### Title Component
+#### Title Component - OK
 
 First, you need to create a Title component to display the main title of your app. This component can be a simple function that returns a heading element with the app title.
 
-#### Explore and Import Data
+#### Explore and Import Data - OK
 
 Import the menu items data from data.js into your project. This data should be an array of objects, with each object representing a menu item and containing properties such as title, price, image URL, and description.
 
