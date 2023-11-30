@@ -1,3 +1,7 @@
 export default function Button() {
-  return <button>button</button>;
+  return (
+    <button type="button" className="btn">
+      All
+    </button>
+  );
 }
