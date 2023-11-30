@@ -7,6 +7,9 @@ export default function MenuItem({ id, title, category, price, img, desc }) {
           <h5>{title}</h5>
           <span className="item-price">${price}</span>
         </header>
+        <div className="item-text">
+          <p>{desc}</p>
+        </div>
       </div>
     </div>
   );
