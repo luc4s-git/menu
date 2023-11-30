@@ -17,7 +17,7 @@ const App = () => {
         <Button></Button>
       </div>
       <section className="section-center">
-        <Menu></Menu>
+        <Menu menu={menu}></Menu>
       </section>
     </main>
   );

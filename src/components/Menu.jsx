@@ -1,3 +1,9 @@
-export default function Menu() {
-  return <h1>menu</h1>;
+import MenuItem from './MenuItem';
+
+export default function Menu({ menu }) {
+  const menuMapping = menu.map((item) => {
+    return <MenuItem />;
+  });
+
+  return <>{menuMapping}</>;
 }
