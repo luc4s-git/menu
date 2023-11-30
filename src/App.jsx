@@ -1,6 +1,11 @@
-import { useState } from 'react';
-import Title from './components/Title';
+// Data
 import data from './data';
+// Hooks
+import { useState } from 'react';
+// Components
+import Title from './components/Title';
+import Menu from './components/Menu';
+import Button from './components/Button';
 
 const App = () => {
   const [menu, setMenu] = useState(data);
@@ -8,6 +13,12 @@ const App = () => {
   return (
     <main className="menu">
       <Title>our menu</Title>
+      <div className="btn-container">
+        <Button></Button>
+      </div>
+      <section className="section-center">
+        <Menu></Menu>
+      </section>
     </main>
   );
 };

@@ -12,7 +12,7 @@ First, you need to create a Title component to display the main title of your ap
 
 Import the menu items data from data.js into your project. This data should be an array of objects, with each object representing a menu item and containing properties such as title, price, image URL, and description.
 
-#### State Value
+#### State Value - OK
 
 Set up the menu items data as a state variable in the App.jsx component using the useState hook. This will allow you to modify the data and have those changes automatically reflected in the rendered output.
 
