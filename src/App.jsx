@@ -14,7 +14,10 @@ const App = () => {
     <main className="menu">
       <Title>our menu</Title>
       <div className="btn-container">
-        <Button></Button>
+        <Button>all</Button>
+        <Button>breakfast</Button>
+        <Button>lunch</Button>
+        <Button>shakes</Button>
       </div>
       <section className="section-center">
         <Menu menu={menu}></Menu>
