@@ -20,11 +20,22 @@ const App = () => {
   const [categories, setCategories] = useState(categoriesArray);
   // Categories shenanigans
 
+  const menuFiltering = (categories, menu) => {
+    const filter = menu.filter((item) => {
+      return item.category === 'breakfast';
+    });
+
+    setMenu(filter);
+  };
+
   return (
     <main className="menu">
       <Title>our menu</Title>
       <div className="btn-container">
-        <Categories categories={categories}></Categories>
+        <Categories
+          categories={categories}
+          menuFiltering={menuFiltering}
+        ></Categories>
       </div>
       <section className="section-center">
         <Menu menu={menu}></Menu>

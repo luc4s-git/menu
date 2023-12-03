@@ -1,7 +1,12 @@
-export default function Button({ categories }) {
+export default function Button({ categories, menuFiltering }) {
   const categoriesMapping = categories.map((category) => {
     return (
-      <button type="button" className="btn" key={category}>
+      <button
+        type="button"
+        className="btn"
+        key={category}
+        onClick={() => console.log(category)}
+      >
         {category}
       </button>
     );
