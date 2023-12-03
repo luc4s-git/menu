@@ -7,18 +7,18 @@ import Title from './components/Title';
 import Menu from './components/Menu';
 import Categories from './components/Categories';
 
-const App = () => {
-  const [menu, setMenu] = useState(data);
-
-  // Categories shenanigans
-  const uniqueCategories = new Set(
-    menu.map((item) => {
+const allCategories = [
+  'all',
+  ...new Set(
+    data.map((item) => {
       return item.category;
     })
-  );
-  const categoriesArray = ['all', ...uniqueCategories];
-  const [categories, setCategories] = useState(categoriesArray);
-  // Categories shenanigans
+  ),
+];
+
+const App = () => {
+  const [menu, setMenu] = useState(data);
+  const [categories, setCategories] = useState(allCategories);
 
   const menuFiltering = (category) => {
     if (category === 'all') {
@@ -30,7 +30,10 @@ const App = () => {
       return item.category === category;
     });
 
-    setMenu(filter);
+    setMenu((currentValue) => {
+      const newValue = filter;
+      return newValue;
+    });
   };
 
   return (
