@@ -26,14 +26,8 @@ const App = () => {
       return;
     }
 
-    const filter = menu.filter((item) => {
-      return item.category === category;
-    });
-
-    setMenu((currentValue) => {
-      const newValue = filter;
-      return newValue;
-    });
+    const newItems = data.filter((item) => item.category === category);
+    setMenu(newItems);
   };
 
   return (
