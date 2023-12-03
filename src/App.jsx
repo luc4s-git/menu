@@ -20,9 +20,9 @@ const App = () => {
   const [categories, setCategories] = useState(categoriesArray);
   // Categories shenanigans
 
-  const menuFiltering = (categories, menu) => {
+  const menuFiltering = (category) => {
     const filter = menu.filter((item) => {
-      return item.category === 'breakfast';
+      return item.category === category;
     });
 
     setMenu(filter);
