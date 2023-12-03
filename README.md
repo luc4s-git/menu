@@ -28,7 +28,7 @@ In the App.jsx component, set up functionality to get only the unique categories
 Hint : new Set ()
 You can find more info on Set Object below after all steps.
 
-#### State Value and Render Categories
+#### State Value and Render Categories - OK
 
 Set up the categories array as a state variable in the App.jsx component using the useState hook. This will allow you to modify the data and have those changes automatically reflected in the rendered output.
 

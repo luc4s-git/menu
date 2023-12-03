@@ -5,26 +5,26 @@ import { useState } from 'react';
 // Components
 import Title from './components/Title';
 import Menu from './components/Menu';
-import Button from './components/Button';
+import Categories from './components/Categories';
 
 const App = () => {
   const [menu, setMenu] = useState(data);
 
-  const categories = new Set(
+  // Categories shenanigans
+  const uniqueCategories = new Set(
     menu.map((item) => {
       return item.category;
     })
   );
-
-  const categoriesArray = ['all', ...categories];
-
-  console.log(categoriesArray);
+  const categoriesArray = ['all', ...uniqueCategories];
+  const [categories, setCategories] = useState(categoriesArray);
+  // Categories shenanigans
 
   return (
     <main className="menu">
       <Title>our menu</Title>
       <div className="btn-container">
-        <Button>filler</Button>
+        <Categories categories={categories}></Categories>
       </div>
       <section className="section-center">
         <Menu menu={menu}></Menu>
