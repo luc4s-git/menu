@@ -5,7 +5,9 @@ export default function Button({ categories, menuFiltering }) {
         type="button"
         className="btn"
         key={category}
-        onClick={() => menuFiltering(category)}
+        onClick={() => {
+          menuFiltering(category);
+        }}
       >
         {category}
       </button>

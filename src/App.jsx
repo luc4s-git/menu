@@ -21,6 +21,11 @@ const App = () => {
   // Categories shenanigans
 
   const menuFiltering = (category) => {
+    if (category === 'all') {
+      setMenu(data);
+      return;
+    }
+
     const filter = menu.filter((item) => {
       return item.category === category;
     });
